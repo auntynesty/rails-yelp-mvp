@@ -9,4 +9,8 @@
   <p><%= @restaurant.category %></p>
 <%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: "btn btn-warning" %>
 
+<% @restaurant.reviews.each do |review| %>
+  <p><%= review.content %></p>
+  <% end %>
+
 </div>
